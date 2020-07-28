@@ -24,7 +24,7 @@ reverse_list = [r"\.\d{2}e\d{2}s\.", r"\.p0612\.", r"\.[pi]0801\.", r"\.p027\.",
 reverse_pattern = re.compile('|'.join(reverse_list), flags=re.IGNORECASE)
 season_pattern = re.compile(r"(.*\.\d{2}e\d{2}s\.)(.*)", flags=re.IGNORECASE)
 word_pattern = re.compile(r"([^A-Z0-9]*[A-Z0-9]+)")
-char_replace = [[r"(\w)1\.(\w)",r"\1i\2"]
+char_replace = [[r"([^\d]|[a-zA-Z_])1\.(\w)",r"\1i\2"]
 ]
 garbage_name = re.compile(r"^[a-zA-Z0-9]{2,}$")
 media_list = [r"\.s\d{2}e\d{2}\.", r"\.2160p\.", r"\.1080[pi]\.", r"\.720p\.", r"\.576[pi]\.", r"\.480[pi]\.", r"\.360p\.", r"\.[xh]26[45]\b", r"\.bluray\.", r"\.[hp]dtv\.",
